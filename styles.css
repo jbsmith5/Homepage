@@ -11,6 +11,17 @@ Color pallete:
   font-size: 38px;
 }
 
+.contact-info {
+  margin-top: 100px;
+  padding: 10px;
+  background-color: #fbeec180;
+  border-radius: 10px;
+}
+
+.button-color {
+  background-color: #659dbd;
+}
+
 .image-1 {
   filter: invert(100%);
   -webkit-filter: invert(100%);
@@ -32,11 +43,54 @@ Color pallete:
   background-color: #bc986a;
 }
 
-body {
-  padding-top: 60px;
+.cropped {
+  width: 100%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
 }
-@media (max-width: 979px) {
+
+/* [1] The container */
+.zoom {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.zoom img {
+  transition: transform 0.5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.zoom:hover img {
+  transform: scale(1.2);
+}
+
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#background-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 4000px) {
   body {
-    padding-top: 0px;
+    padding-top: 82px;
   }
 }
